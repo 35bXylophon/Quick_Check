@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DIGI-CO Quickcheck</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="logo-box" id="logoBox">Logo</div>
+  <div><h1 id="appTitle">DIGI-CO Quickcheck</h1><p id="appSubtitle" class="small-note">Fragebogen zur Messung des Digitalisierungs-Reifegrades</p></div>
+  <div class="brand-box" id="partnerBox">Geldgeber/Partner</div>
+</header>
+<div class="container">
+  <div class="card"><h2>Fortschritt</h2><p>Noch <span id="remaining">0</span> Fragen offen</p><div class="progress-container"><div class="progress-bar" id="progressBar">0%</div></div></div>
+  <div id="questionnaire"></div>
+  <div class="card"><h2>Automatische Auswertung</h2><div id="scoreBox" class="score-box neutral">Auswertung nach vollständiger Beantwortung</div></div>
+  <div class="card"><h2>Digitalisierungsgrad</h2><div id="digitalScoreBox" class="score-box neutral">Auswertung nach vollständiger Beantwortung</div></div>
+  <div class="card hidden" id="aiScoreCard"><h2>KI-Reifegrad</h2><div id="aiScoreBox" class="score-box neutral">KI-Reifegrad: 0 %</div></div>
+  <div class="card hidden" id="recommendationCard"><h2>Empfehlungen</h2><ul id="recommendations" class="recommendation-list"></ul></div>
+  <div class="card"><h2>Dashboard</h2><div class="dashboard"><canvas id="radarChart"></canvas><canvas id="barChart"></canvas></div></div>
+  <div class="card"><button onclick="downloadPDF()">PDF Export</button><button onclick="downloadCSV()">CSV / Excel Export</button><button onclick="resetQuestionnaire()" class="secondary-button">Zurücksetzen</button><a href="admin.html"><button type="button" class="success-button">Builder öffnen</button></a></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

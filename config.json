@@ -1,0 +1,299 @@
+{
+  "meta": {
+    "title": "Demo-Quickcheck: Digitale Arbeitsfähigkeit",
+    "subtitle": "Demonstration der Funktionsweise des Builders",
+    "logoText": "Logo",
+    "partnerText": "Geldgeber/Partner",
+    "pdfFileName": "Demo_Quickcheck.pdf",
+    "csvFileName": "Demo_Quickcheck.csv"
+  },
+  "scoring": {
+    "scaleMin": 1,
+    "scaleMax": 4,
+    "aiUnlockThreshold": 3,
+    "redBelow": 50,
+    "yellowBelow": 75,
+    "showResultsOnlyWhenComplete": true,
+    "aiScoreBasedOnAllAiQuestions": true
+  },
+  "sections": [
+    {
+      "id": "0",
+      "title": "0. Allgemeine Ausgangslage",
+      "radarLabel": "Ausgangslage",
+      "hasAiQuestions": false,
+      "questions": [
+        {
+          "id": "0.1",
+          "text": "Vor der Einführung neuer digitaler Werkzeuge wird der erwartete Nutzen klar beschrieben.",
+          "type": "scale",
+          "category": "digital",
+          "required": true,
+          "invertScore": false,
+          "allowOther": false,
+          "options": []
+        },
+        {
+          "id": "0.2",
+          "text": "Nach der Einführung digitaler Werkzeuge wird geprüft, ob der erwartete Nutzen erreicht wurde.",
+          "type": "scale",
+          "category": "digital",
+          "required": true,
+          "invertScore": false,
+          "allowOther": false,
+          "options": []
+        },
+        {
+          "id": "0.3",
+          "text": "Was ist aktuell der wichtigste Auslöser für Digitalisierungsmaßnahmen?",
+          "type": "checkbox",
+          "category": "info",
+          "required": false,
+          "invertScore": false,
+          "allowOther": false,
+          "options": [
+            "Zeitersparnis",
+            "Fehlerreduktion",
+            "Kundenanforderung",
+            "Kostendruck",
+            "Mitarbeiterentlastung",
+            "Sonstiges"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A",
+      "title": "A. Interne Zusammenarbeit",
+      "radarLabel": "Zusammenarbeit",
+      "hasAiQuestions": true,
+      "questions": [
+        {
+          "id": "A1",
+          "text": "Wichtige Informationen werden zentral digital abgelegt und sind für berechtigte Mitarbeitende zugänglich.",
+          "type": "scale",
+          "category": "digital",
+          "required": true,
+          "invertScore": false,
+          "allowOther": false,
+          "options": []
+        },
+        {
+          "id": "A2",
+          "text": "Aufgaben und Abstimmungen werden überwiegend digital organisiert.",
+          "type": "scale",
+          "category": "digital",
+          "required": true,
+          "invertScore": false,
+          "allowOther": false,
+          "options": []
+        },
+        {
+          "id": "A3",
+          "text": "Mitarbeitende wissen, wo sie aktuelle Dokumente, Vorlagen und Prozessinformationen finden.",
+          "type": "scale",
+          "category": "digital",
+          "required": true,
+          "invertScore": false,
+          "allowOther": false,
+          "options": []
+        },
+        {
+          "id": "A4",
+          "text": "Wir nutzen KI, um interne Informationen schneller zu finden oder zusammenzufassen.",
+          "type": "scale",
+          "category": "ai",
+          "required": true,
+          "invertScore": false,
+          "allowOther": false,
+          "options": []
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "title": "B. Kundenkommunikation",
+      "radarLabel": "Kundenkommunikation",
+      "hasAiQuestions": true,
+      "questions": [
+        {
+          "id": "B1",
+          "text": "Kundenanfragen werden digital erfasst und nachvollziehbar bearbeitet.",
+          "type": "scale",
+          "category": "digital",
+          "required": true,
+          "invertScore": false,
+          "allowOther": false,
+          "options": []
+        },
+        {
+          "id": "B2",
+          "text": "Angebote, Auftragsbestätigungen oder Statusinformationen können digital bereitgestellt werden.",
+          "type": "scale",
+          "category": "digital",
+          "required": true,
+          "invertScore": false,
+          "allowOther": false,
+          "options": []
+        },
+        {
+          "id": "B3",
+          "text": "Wiederkehrende Kundenanfragen werden durch Vorlagen, Wissensdatenbanken oder digitale Prozesse unterstützt.",
+          "type": "scale",
+          "category": "digital",
+          "required": true,
+          "invertScore": false,
+          "allowOther": false,
+          "options": []
+        },
+        {
+          "id": "B4",
+          "text": "Wir nutzen KI, um Antwortvorschläge, Textbausteine oder Angebotsentwürfe zu erstellen.",
+          "type": "scale",
+          "category": "ai",
+          "required": true,
+          "invertScore": false,
+          "allowOther": false,
+          "options": []
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "title": "C. Daten & Entscheidungen",
+      "radarLabel": "Daten & Entscheidungen",
+      "hasAiQuestions": true,
+      "questions": [
+        {
+          "id": "C1",
+          "text": "Wichtige Kennzahlen werden regelmäßig digital erfasst.",
+          "type": "scale",
+          "category": "digital",
+          "required": true,
+          "invertScore": false,
+          "allowOther": false,
+          "options": []
+        },
+        {
+          "id": "C2",
+          "text": "Entscheidungen werden zumindest teilweise auf Basis aktueller Daten getroffen.",
+          "type": "scale",
+          "category": "digital",
+          "required": true,
+          "invertScore": false,
+          "allowOther": false,
+          "options": []
+        },
+        {
+          "id": "C3",
+          "text": "Daten aus verschiedenen Systemen oder Bereichen können miteinander verglichen werden.",
+          "type": "scale",
+          "category": "digital",
+          "required": true,
+          "invertScore": false,
+          "allowOther": false,
+          "options": []
+        },
+        {
+          "id": "C4",
+          "text": "Wir nutzen KI, um Muster, Risiken oder Verbesserungspotenziale in Daten zu erkennen.",
+          "type": "scale",
+          "category": "ai",
+          "required": true,
+          "invertScore": false,
+          "allowOther": false,
+          "options": []
+        }
+      ]
+    },
+    {
+      "id": "D",
+      "title": "D. Sicherheit & Verantwortung",
+      "radarLabel": "Sicherheit & Verantwortung",
+      "hasAiQuestions": true,
+      "questions": [
+        {
+          "id": "D1",
+          "text": "Zugriffsrechte auf digitale Systeme sind klar geregelt.",
+          "type": "scale",
+          "category": "digital",
+          "required": true,
+          "invertScore": false,
+          "allowOther": false,
+          "options": []
+        },
+        {
+          "id": "D2",
+          "text": "Es gibt klare Verantwortlichkeiten für digitale Systeme, Daten und Prozesse.",
+          "type": "scale",
+          "category": "digital",
+          "required": true,
+          "invertScore": false,
+          "allowOther": false,
+          "options": []
+        },
+        {
+          "id": "D3",
+          "text": "Mitarbeitende werden im sicheren Umgang mit digitalen Werkzeugen geschult.",
+          "type": "scale",
+          "category": "digital",
+          "required": true,
+          "invertScore": false,
+          "maxChoices": 3,
+          "allowOther": false,
+          "options": []
+        },
+        {
+          "id": "D4",
+          "text": "Für den Einsatz von KI gibt es klare Regeln, Verantwortlichkeiten oder Leitlinien.",
+          "type": "scale",
+          "category": "ai",
+          "required": true,
+          "invertScore": false,
+          "allowOther": false,
+          "options": []
+        }
+      ]
+    },
+    {
+      "id": "X",
+      "title": "Abschluss",
+      "radarLabel": "X",
+      "hasAiQuestions": false,
+      "questions": [
+        {
+          "id": "X1",
+          "text": "Welche Verbesserung im digitalen Arbeiten hätte für Ihr Unternehmen aktuell den größten Nutzen?",
+          "type": "text",
+          "category": "info",
+          "required": false,
+          "invertScore": false,
+          "allowOther": false,
+          "options": []
+        }
+      ]
+    }
+  ],
+  "recommendations": [
+    {
+      "scope": "overall",
+      "below": 50,
+      "text": "Die digitale Arbeitsfähigkeit ist noch gering ausgeprägt. Priorisieren Sie zunächst wenige, klar abgegrenzte Prozesse mit hohem Nutzen und vermeiden Sie parallele Einzelmaßnahmen ohne Zielbild."
+    },
+    {
+      "scope": "digital",
+      "below": 60,
+      "text": "Vor einem intensiveren KI-Einsatz sollten zunächst digitale Grundlagen gestärkt werden, insbesondere zentrale Ablageorte, klare Verantwortlichkeiten und verlässliche Datenquellen."
+    },
+    {
+      "scope": "ai",
+      "below": 25,
+      "text": "KI-Potenziale sind erkennbar, aber noch wenig erschlossen. Starten Sie mit einfachen, risikoarmen Anwendungsfällen wie Textbausteinen, Zusammenfassungen oder Wissenssuche."
+    },
+    {
+      "scope": "section:C",
+      "below": 50,
+      "text": "Die Datennutzung sollte verbessert werden. Definieren Sie wenige zentrale Kennzahlen und stellen Sie sicher, dass diese regelmäßig, aktuell und vergleichbar verfügbar sind."
+    }
+  ]
+}

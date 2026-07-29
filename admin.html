@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quickcheck Builder</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="logo-box" id="adminLogoBox">Logo</div>
+  <div><h1>Quickcheck Builder</h1><p class="small-note">Fragen, Scoring, Empfehlungen, Partner und Thresholds variabel anpassen</p></div>
+  <div class="brand-box" id="adminPartnerBox">Geldgeber/Partner</div>
+</header>
+<div class="container">
+  <div class="card">
+    <h2>Bedienung</h2>
+    <p>Bearbeite die Maske, lade anschließend die neue <strong>config.json</strong> herunter und ersetze diese Datei im GitHub-Pages-Repository.</p>
+    <div class="builder-actions">
+      <button onclick="downloadConfig()">config.json herunterladen</button>
+      <button onclick="previewConfig()" class="success-button">Vorschau im Quickcheck speichern</button>
+      <button onclick="clearPreview()" class="secondary-button">Vorschau zurücksetzen</button>
+      <a href="index.html"><button type="button">Quickcheck öffnen</button></a>
+      <button onclick="document.getElementById('importFile').click()" class="secondary-button">config.json importieren</button>
+      <input type="file" id="importFile" accept="application/json" style="display:none">
+    </div>
+  </div>
+  <div class="card"><h2>Allgemeine Einstellungen</h2><div class="builder-grid">
+    <div><label>Titel</label><input id="metaTitle"></div><div><label>Untertitel</label><input id="metaSubtitle"></div><div><label>Logo-Platzhalter</label><input id="metaLogoText"></div><div><label>Partner/Geldgeber</label><input id="metaPartnerText"></div><div><label>PDF-Dateiname</label><input id="metaPdfFileName"></div><div><label>CSV-Dateiname</label><input id="metaCsvFileName"></div>
+  </div></div>
+  <div class="card"><h2>Scoring & Thresholds</h2><div class="builder-grid">
+    <div><label>KI-Freischaltung ab Antwortwert</label><input id="scoreAiUnlockThreshold" type="number" min="1" max="4"></div><div><label>Rot unter (%)</label><input id="scoreRedBelow" type="number" min="0" max="100"></div><div><label>Gelb unter (%)</label><input id="scoreYellowBelow" type="number" min="0" max="100"></div><div><label>Ergebnisse erst nach vollständiger Beantwortung</label><select id="scoreShowResultsOnlyWhenComplete"><option value="true">Ja</option><option value="false">Nein</option></select></div>
+  </div></div>
+  <div class="card"><h2>Fragenblöcke</h2><div id="sectionsEditor"></div><button onclick="addSection()" class="success-button">+ Block hinzufügen</button></div>
+  <div class="card"><h2>Empfehlungen</h2><p class="small-note">Scope Beispiele: <strong>overall</strong>, <strong>digital</strong>, <strong>ai</strong>, <strong>section:A</strong></p><div id="recommendationsEditor"></div><button onclick="addRecommendation()" class="success-button">+ Empfehlung hinzufügen</button></div>
+  <div class="card"><h2>JSON-Vorschau</h2><textarea id="jsonPreview" rows="18"></textarea><button onclick="applyJsonPreview()" class="secondary-button">JSON aus Vorschau übernehmen</button></div>
+</div>
+<script src="builder.js"></script>
+</body>
+</html>
